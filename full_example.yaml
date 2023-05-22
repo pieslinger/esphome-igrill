@@ -60,7 +60,7 @@ sensor:
     name: "IGrill WiFi Signal Percent"
     filters:
       - lambda: return min(max(2 * (x + 100.0), 0.0), 100.0);
-    unit_of_measurement: "Signal %"
+    unit_of_measurement: "%"
     entity_category: "diagnostic"
     
  binary_sensor:
