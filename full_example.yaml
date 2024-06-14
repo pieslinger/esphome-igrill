@@ -35,7 +35,7 @@ sensor:
   - platform: igrill
     ble_client_id: igrillv2
     update_interval: 30s # default
-    send_value_when_unplugged: true # default
+    send_value_when_unplugged: false # default
     unplugged_probe_value: 0 # default
     battery_level:
       name: "IGrill v2 battery"
