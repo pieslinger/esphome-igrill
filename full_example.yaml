@@ -24,7 +24,7 @@ wifi:
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
     ssid: "Esphome-Web-6Bd5Dc"
-    password: "4oK1B1a6Yb7r"
+    password: "password"
 
 #adding igrill stuff https://github.com/pieslinger/esphome-igrill
 # iGrill_V2 MAC: 70:91:XX:XX:XX:XX
@@ -39,7 +39,7 @@ esp32_ble_tracker:
 #igrill_ble_listener:
 
 ble_client:
-  - mac_address: 70:91:8F:0A:8D:F3
+  - mac_address: 70:91:XX:XX:XX:XX
     id: igrillv2
 
 sensor:
@@ -47,7 +47,7 @@ sensor:
   - platform: igrill
     ble_client_id: igrillv2
     update_interval: 30s # default
-    send_value_when_unplugged: false # default
+    send_value_when_unplugged: true # default - remember to set Units in HA. 0F is -17.78C
     unplugged_probe_value: 0 # default
     battery_level:
       name: "IGrill v2 battery"
